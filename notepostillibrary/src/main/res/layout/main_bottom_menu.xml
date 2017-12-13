@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/boom_buttons_menus"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:orientation="vertical"
+>
+
+    <ImageButton
+        android:id="@+id/note_write_but_show"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/selector_menu_but_hide"
+        android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/boom_button_menus"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/menu_but_type_line"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_postil_menu_but_type_line"
+            android:visibility="gone"/>
+        <ImageButton
+            android:id="@+id/menu_but_type_circle"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_postil_menu_but_type_circle"
+            android:visibility="gone"/>
+        <ImageButton
+            android:id="@+id/menu_but_type_rec"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_postil_menu_but_type_rec"
+            android:visibility="gone"/>
+        <ImageButton
+            android:id="@+id/menu_but_type_write"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_postil_menu_but_type_write"
+            android:visibility="gone"/>
+
+
+        <ImageButton
+            android:id="@+id/menu_but_hide"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_hide"/>
+        <ImageButton
+            android:id="@+id/menu_but_save"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_save"/>
+        <ImageButton
+            android:id="@+id/menu_but_clear"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_clear"/>
+        <ImageButton
+            android:id="@+id/menu_but_repeal"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_repeal"/>
+        <ImageButton
+            android:id="@+id/menu_but_setting"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_setting"/>
+        <ImageButton
+            android:id="@+id/menu_but_eraser"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_eraser"/>
+        <ImageButton
+            android:id="@+id/menu_but_go_back"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_go_back"/>
+        <ImageButton
+            android:id="@+id/menu_but_last_pager"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_last_pager"/>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/but_menu_number_bg"
+                      android:orientation="vertical"
+                      android:padding="3dp">
+            <TextView android:id="@+id/menu_tv_number"
+                      android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:layout_gravity="center"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:textColor="#ffffff"
+                      android:textSize="18sp"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:src="@drawable/main_button_tv_yema"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/menu_but_next_pager"
+            style="@style/Menu_but_style"
+            android:src="@drawable/selector_menu_but_next_pager"/>
+    </LinearLayout>
+
+</LinearLayout>

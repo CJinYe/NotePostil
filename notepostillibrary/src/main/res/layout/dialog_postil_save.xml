@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/dialog_base_background"
+              android:orientation="vertical">
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="0dp"
+               android:layout_gravity="center"
+               android:layout_weight="100"
+               android:src="@drawable/dialog_tv_tishi"/>
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="0dp"
+               android:layout_gravity="center"
+               android:layout_weight="120"
+               android:src="@drawable/dialog_postil_tv_save"/>
+
+    <EditText android:id="@+id/dialog_postil_save_edt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:layout_gravity="center"
+              android:background="@drawable/dialog_base_edt_bg"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="95">
+        <ImageButton android:id="@+id/dialog_postil_save_but_cancel"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_weight="1"
+                     android:background="@null"
+                     android:src="@drawable/selector_dialog_but_cancel"/>
+        <ImageButton android:id="@+id/dialog_postil_save_but_sure"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_weight="1"
+                     android:background="@null"
+                     android:src="@drawable/selector_dialog_but_sure"/>
+    </LinearLayout>
+</LinearLayout>

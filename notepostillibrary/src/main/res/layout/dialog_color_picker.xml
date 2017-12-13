@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1280"
+                android:orientation="vertical">
+    <LinearLayout android:id="@+id/linearLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/x736"
+                  android:orientation="horizontal">
+
+        <RelativeLayout android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+            <!--背景颜色-->
+            <LinearLayout
+                android:id="@+id/dialog_color_ll_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <com.larswerkman.holocolorpicker.ColorPicker
+                    android:id="@+id/dialog_color_background_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:color_wheel_thickness="40sp"/>
+                <com.larswerkman.holocolorpicker.SVBar
+                    android:id="@+id/dialog_color_background_svbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+                <com.larswerkman.holocolorpicker.SaturationBar
+                    android:id="@+id/dialog_color_background_saturationbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/dialog_color_background_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="背景颜色选择"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!--画线类型选择-->
+            <LinearLayout android:id="@+id/dialog_color_layout_line_type"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:paddingStart="10dp"
+                          android:paddingEnd="10dp"
+                          android:orientation="vertical"
+                          android:visibility="gone">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="20"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="105"
+                    android:background="@drawable/dialog_setting_line_type_bg"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <ImageButton android:id="@+id/dialog_color_type_line"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_type_line_normal"/>
+                    <ImageButton android:id="@+id/dialog_color_type_line_two"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_type_wale_noraml"/>
+                    <ImageButton android:id="@+id/dialog_color_type_line_empty"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_type_emtry_noraml"/>
+                    <ImageButton android:id="@+id/dialog_color_type_wave"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_type_two_line_noraml"/>
+                    <ImageButton android:id="@+id/dialog_color_type_wave_two"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_type_two_wale_noraml"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="25"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="画笔类型选择"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!--背景类型选择-->
+            <LinearLayout android:id="@+id/dialog_color_layout_bg_type"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:paddingStart="10dp"
+                          android:paddingEnd="10dp"
+                          android:orientation="vertical"
+                          android:visibility="gone">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="20"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="105"
+                    android:background="@drawable/dialog_setting_line_type_bg"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageButton android:id="@+id/dialog_color_but_bg_normal"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_bg_type_deft_check"/>
+                    <ImageButton android:id="@+id/dialog_color_but_bg_line"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="0dp"
+                                 android:layout_weight="1"
+                                 android:background="@null"
+                                 android:src="@drawable/dialog_setting_bg_type_line_normal"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="0dp"
+                              android:layout_weight="25"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="背景类型选择"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.larswerkman.holocolorpicker.ColorPicker
+                android:id="@+id/dialog_color_paint_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:color_wheel_thickness="40sp"/>
+            <com.larswerkman.holocolorpicker.SVBar
+                android:id="@+id/dialog_color_paint_svbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+            <com.larswerkman.holocolorpicker.SaturationBar
+                android:id="@+id/dialog_color_paint_saturationbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:visibility="gone"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="0dp"
+                          android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/dialog_color_paint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="bottom"
+                android:text="画笔颜色选择"
+                android:textColor="#ffffff"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--<com.xw.repo.BubbleSeekBar-->
+    <!--android:id="@+id/dialog_color_picker_seek_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/linearLayout"-->
+    <!--android:layout_marginTop="18dp"-->
+    <!--app:bsb_auto_adjust_section_mark="true"-->
+    <!--app:bsb_max="70"-->
+    <!--app:bsb_second_track_color="#1874ff"-->
+    <!--app:bsb_second_track_size="7sp"-->
+    <!--app:bsb_thumb_color="#2ea0fd"-->
+    <!--app:bsb_thumb_radius="15dp"-->
+    <!--app:bsb_thumb_text_size="18sp"-->
+    <!--app:bsb_track_size="4sp"/>-->
+    <!--app:bsb_touch_to_seek="true"-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/dialog_color_picker_seek_bar"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="画笔粗细选择"-->
+    <!--android:textColor="#ffffff" android:textSize="20sp"/>-->
+    <!--<view.SnailBar-->
+    <!--android:id="@+id/dialog_color_picker_seek_bar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_below="@+id/linearLayout"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:max="70"-->
+    <!--android:padding="10dp"-->
+    <!--android:thumb="@drawable/seekbar_button" android:visibility="visible"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/dialog_color_picker_bt_sure"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/textView"-->
+    <!--android:layout_centerHorizontal="true" android:src="@drawable/selector_picker_sure"/>-->
+    <!--<view.ProgressTextView-->
+    <!--android:id="@+id/dialog_color_picker_seek_text"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_below="@+id/linearLayout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginEnd="18dp"-->
+    <!--android:layout_marginStart="18dp"-->
+    <!--android:visibility="visible"-->
+    <!--app:ptv_textColor="#ffffff"-->
+    <!--app:ptv_thumWidth="15dp"/>-->
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@+id/linearLayout"
+                  android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <icox.cjy.notepostillibrary.views.ProgressTextView
+                android:id="@+id/dialog_color_picker_seek_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:visibility="visible"
+                app:ptv_textColor="#ffffff"
+                app:ptv_thumWidth="15dp"/>
+            <icox.cjy.notepostillibrary.views.SnailBar
+                android:id="@+id/dialog_color_picker_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:max="70"
+                android:splitTrack="false"
+                android:thumb="@drawable/dialog_setting_seek_thum"
+                android:visibility="visible"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="画笔粗细选择"
+            android:textColor="#ffffff" android:textSize="18sp"/>
+        <ImageView
+            android:id="@+id/dialog_color_picker_bt_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/selector_dialog_setting_but_sure"/>
+
+    </LinearLayout>
+</RelativeLayout>
